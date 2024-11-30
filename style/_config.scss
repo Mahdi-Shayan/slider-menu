@@ -1,0 +1,32 @@
+$primaryClr: #11121a;
+$lineClr: #42434a;
+$hoverClr: #222533;
+$texyClr: #e6e6ef;
+$accentClr: #5e63ff;
+$secondaryClr: #b0b3c1;
+
+@mixin flex($dir: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+}
+
+@mixin btn($color: white, $bg: none) {
+    text-align: center;
+    color: $color;
+    background-color: $bg;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

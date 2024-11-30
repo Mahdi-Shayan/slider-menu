@@ -1,0 +1,122 @@
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  background-color: #11121a;
+  color: #e6e6ef;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#slider {
+  position: fixed;
+  transition: all 0.4s;
+  overflow: hidden;
+  background-color: #11121a;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 0.5rem;
+  border-right: 2px solid #42434a;
+}
+#slider.close {
+  padding: 5px;
+  width: 65px;
+}
+#slider.close li {
+  width: auto;
+}
+#slider.close li span, #slider.close li svg:last-child {
+  display: none;
+}
+#slider ul {
+  list-style: none;
+  margin-top: 65px;
+}
+#slider ul li {
+  width: 230px;
+}
+#slider ul li.active a {
+  color: #5e63ff;
+}
+#slider ul li.active a svg {
+  fill: #5e63ff;
+}
+#slider .toggle {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+#slider .toggle button {
+  margin-right: 6.5px;
+}
+#slider .sub-menu {
+  display: none;
+  transition: all 0.5s;
+}
+#slider .sub-menu.show {
+  display: inline;
+}
+#slider .sub-menu a {
+  padding-left: 2rem;
+}
+#slider .dropdown-btn {
+  width: 100%;
+}
+#slider .dropdown-btn span {
+  display: flex;
+  flex-grow: 1;
+}
+#slider svg {
+  transition: 0.2s;
+}
+#slider .btn, #slider a {
+  text-align: center;
+  color: #e6e6ef;
+  background-color: #11121a;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  padding: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#slider .btn:hover, #slider a:hover {
+  background-color: #222533;
+}
+#slider .rotate svg:last-child {
+  rotate: 181deg;
+}
+
+main {
+  margin-left: 250px;
+  transition: 0.4s;
+}
+main.close {
+  margin-left: 70px;
+}
+main .container {
+  border: 2px solid #42434a;
+  border-radius: 1rem;
+  margin: 20px;
+  padding: min(3rem, 15%);
+}
+main .container p, main .container h2 {
+  padding: 20px 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}/*# sourceMappingURL=style.css.map */

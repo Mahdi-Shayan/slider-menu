@@ -1,0 +1,132 @@
+@import '_config.scss';
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: $primaryClr;
+    color: $texyClr;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+}
+
+#slider {
+    position: fixed;
+    transition: all .4s;
+    overflow: hidden;
+
+    background-color: $primaryClr;
+    height: 100vh;
+    width: 250px;
+    padding: 5px .5rem;
+    border-right: 2px solid $lineClr;
+
+    &.close {
+        padding: 5px;
+        width: 65px;
+
+        li {
+            width: auto;
+            span, svg:last-child{
+                display: none;
+            }
+        }   
+    }
+    
+    ul {
+        list-style: none;
+        margin-top: 65px;
+
+        li {
+            width: 230px;
+        }
+
+        li.active {
+            a{
+                color: $accentClr;
+                svg {
+                    fill: $accentClr;
+                }
+            }
+        }
+     }
+
+    .toggle {
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 4px;
+
+        button {
+            margin-right: 6.5px;
+        }
+    }
+
+    .sub-menu {
+        display: none;
+        transition: all .5s;
+
+        &.show {
+            display: inline;
+        }
+
+        a {
+            padding-left: 2rem;
+        }
+    }
+
+    .dropdown-btn {
+        width: 100%;
+        
+        span {
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+
+    svg {
+        transition: .2s;
+    }
+    
+    .btn, a{
+        @include btn($texyClr, $primaryClr);
+        border: none;
+        padding: .85rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover {
+            background-color: $hoverClr;
+        }
+    }
+
+    .rotate svg:last-child {
+        rotate: 181deg;
+    }
+}
+
+main {
+    margin-left: 250px;
+    transition: .4s;
+
+    &.close {
+        margin-left: 70px;
+    }
+    
+    .container {
+        border: 2px solid $lineClr;
+        border-radius: 1rem;
+        margin: 20px;
+        padding: min(3rem, 15%);
+
+        p, h2 {
+            padding: 20px 10px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+    }
+}
